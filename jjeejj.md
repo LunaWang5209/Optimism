@@ -53,7 +53,7 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 # {你的名字}
 
-1. 奕 iyi:   一名 后端 Golang、Node.js、Rust 开发者; 合约 ETH、Arb、Solana 开发者。进入 web3 行业 2年
+1. 奕 iyi: 一名 后端 Golang、Node.js、Rust 开发者; 合约 ETH、Arb、Solana 开发者。进入 web3 行业 2 年
 2. 你认为你会完成本次残酷学习吗？会
 
 ## Notes
@@ -64,6 +64,18 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 笔记内容
 
-### 2024.07.12
+### 2025.01.06
+
+1. 初步了解了 Optimism layer2。存款、取款 是通过 bridge 来完成的，存款很快就可以完成，取款需要 challenge period 给出时间挑战时间来验证交易是否有效
+2. 目前还不知道 和 Arb 的 区别, 待后续进一步学习
+
+### 2025.01.07
+
+1. 对比了 Optimism 和 Arbitrum 区别
+   1. 都是使用了 Optimistic Rollup 来实现：假设某事为有效，直至其被证伪
+   2. 解决争议的方式不一样：
+      1. Optimism 会在 EVM 运行每笔交易，不能处理超过 EVM gas limit 的交易
+      2. Arbitrum 会经过多伦协商，将最后单步的断言发给 EVM 进行验证， 消耗更少的 gas
+      3. Optimism 解决争议的方式 更加简单，更加快速
 
 <!-- Content_END -->

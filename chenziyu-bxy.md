@@ -1,57 +1,9 @@
 ---
 timezone: Asia/Shanghai
 ---
-
-> 请在上边的 timezone 添加你的当地时区，这会有助于你的打卡状态的自动化更新，如果没有添加，默认为北京时间 UTC+8 时区
-> 时区请参考以下列表，请移除 # 以后的内容
-
-timezone: Pacific/Honolulu # 夏威夷-阿留申标准时间 (UTC-10)
-
-timezone: America/Anchorage # 阿拉斯加标准时间 (UTC-9)
-
-timezone: America/Los_Angeles # 太平洋标准时间 (UTC-8)
-
-timezone: America/Denver # 山地标准时间 (UTC-7)
-
-timezone: America/Chicago # 中部标准时间 (UTC-6)
-
-timezone: America/New_York # 东部标准时间 (UTC-5)
-
-timezone: America/Halifax # 大西洋标准时间 (UTC-4)
-
-timezone: America/St_Johns # 纽芬兰标准时间 (UTC-3:30)
-
-timezone: America/Sao_Paulo # 巴西利亚时间 (UTC-3)
-
-timezone: Atlantic/Azores # 亚速尔群岛时间 (UTC-1)
-
-timezone: Europe/London # 格林威治标准时间 (UTC+0)
-
-timezone: Europe/Berlin # 中欧标准时间 (UTC+1)
-
-timezone: Europe/Helsinki # 东欧标准时间 (UTC+2)
-
-timezone: Europe/Moscow # 莫斯科标准时间 (UTC+3)
-
-timezone: Asia/Dubai # 海湾标准时间 (UTC+4)
-
-timezone: Asia/Kolkata # 印度标准时间 (UTC+5:30)
-
-timezone: Asia/Dhaka # 孟加拉国标准时间 (UTC+6)
-
-timezone: Asia/Bangkok # 中南半岛时间 (UTC+7)
-
-timezone: Asia/Shanghai # 中国标准时间 (UTC+8)
-
-timezone: Asia/Tokyo # 日本标准时间 (UTC+9)
-
-timezone: Australia/Sydney # 澳大利亚东部标准时间 (UTC+10)
-
-timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
-
 ---
 
-# {你的名字}
+# {陈子谕}
 
 1. 自我介绍
   我是陈子谕，我想要成为一名web3开发人员，我会为此持续付出努力，直到完成目标
@@ -64,8 +16,61 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 <!-- Content_START -->
 
 ### 2025.01.06
+Rollup协议概述
+Optimism的核心思想是Optimistic Rollup（乐观汇总）。它是一种利用另一个区块链的安全性来进行扩容的协议。
 
-笔记内容
+Optimistic Rollups 简要概述（TL;DR）
+Optimism是一个“Optimistic Rollup”，这实际上是描述一个利用另一个“父链”区块链的安全性的区块链。具体而言，Optimistic Rollups使用父链的共识机制（如工作量证明PoW或权益证明PoS）来保障安全，而不需要自己提供一个共识机制。在OP Mainnet的情况下，这个父链是以太坊。
+
+区块存储
+在Bedrock架构下，L2区块被存储到以太坊区块链中，使用非合约地址（例如0xff00..0010）来减少L1的gas费用。这些区块以EIP-4844 Blob的形式作为交易提交，因此，一旦这些区块被包含到区块中并获得足够的验证，就无法再被修改或审查。这样，OP Mainnet继承了以太坊的可用性和完整性保证。
+
+这些区块被以压缩格式写入L1，以减少成本，因为写入L1是OP Mainnet交易的主要成本。
+
+区块生产
+Optimism的区块生产由一个名为“sequencer”（顺序器）的单一方主要管理，提供以下服务：
+
+提供交易确认和状态更新。
+构建并执行L2区块。
+将用户交易提交到L1。
+在Bedrock中，sequencer有一个类似L1以太坊的内存池，但该内存池是私有的，以避免开启MEV（最大化提取价值）的机会。在OP Mainnet中，区块每两秒生成一次，不论是空区块（没有交易），填充满交易，还是其他情况。
+
+交易有两种方式到达sequencer：
+
+直接提交给sequencer的交易：这种交易提交成本较低，因为不需要单独的L1交易费用，但无法实现审查抵抗，因为只有sequencer知道这些交易。
+在L1提交的交易（称为存款）：这些交易会包含在相应的L2区块中。每个L2区块由“epoch”（对应的L1区块）和在该epoch内的序列号标识。epoch的第一个区块包括了所有在对应L1区块发生的存款。
+如果sequencer试图忽略一个合法的L1交易，它会导致状态与验证者不一致，这与尝试伪造状态的情况一样。这确保了OP Mainnet具备与以太坊L1相同的审查抵抗能力。
+
+目前，Optimism基金会是OP Mainnet唯一的区块生产者。
+
+区块执行
+执行引擎（通过op-geth实现）接收区块有两种机制：
+
+通过P2P网络与其他执行引擎同步：这种方式与L1的执行客户端同步状态类似。
+通过Rollup节点（op-node）从L1衍生L2区块：这种机制较慢，但具有审查抵抗能力。
+跨层桥接ETH或代币
+Optimism的设计使得用户可以在L2（如OP Mainnet、OP Sepolia等）与底层L1（如以太坊主网、Sepolia等）之间发送任意消息。这使得在两个网络之间传输ETH或代币（包括ERC20代币）成为可能。具体的消息传递机制根据消息发送的方向不同而有所区别。
+
+OP Mainnet使用这一功能，通过标准桥接（Standard Bridge）使得用户可以将代币从以太坊存入OP Mainnet，同时也可以从OP Mainnet提取相同的代币。有关标准桥接的详细信息，请参考开发者文档和示例。
+
+从以太坊到OP Mainnet
+在Optimism术语中，交易从以太坊（L1）到OP Mainnet（L2）被称为存款（Deposits）。
+
+用户可以通过L1CrossDomainMessenger或L1StandardBridge进行存款。
+存款交易会成为“epoch”对应的第一个L2区块的一部分。这个L2区块通常会在相应的L1区块几分钟后创建。
+从OP Mainnet到以太坊
+从OP Mainnet到以太坊的操作被称为提款（Withdrawals），包括以下三个步骤：
+
+初始化提款：通过L2交易启动提款。
+等待输出根提交到L1：然后通过proveWithdrawalTransaction提交提款证明。这个新步骤允许通过链外监控提款过程，从而使得识别不正确的提款或输出根变得更容易，保护OP Mainnet用户免受潜在的桥接漏洞。
+等待挑战期结束：提款的挑战期为一周（主网），或者更短（测试网络）。挑战期结束后，提款最终确定。
+
+故障证明
+在Optimistic Rollup中，状态承诺会被发布到L1（在OP Mainnet中是以太坊），但这些承诺没有直接的有效性证明。相反，这些承诺会在一段时间内（称为“挑战窗口”）被视为待定状态。如果在挑战窗口期间（目前为7天）没有人对该状态承诺提出挑战，那么它就被视为最终确认。
+
+当状态承诺被挑战时，可以通过“故障证明”（Fault Proof）过程将其作废。如果挑战成功，该承诺会从状态承诺链（StateCommitmentChain）中移除，并最终被新的承诺替代。需要注意的是，成功的挑战不会回滚OP Mainnet本身，只会替换有关链状态的已发布承诺。OP Mainnet的交易顺序和状态不会因为故障证明的挑战而改变。
+
+当前，故障证明过程正在进行重大重构，这是由于2021年11月11日的EVM等价性更新带来的副作用。
 
 ### 2024.07.12
 

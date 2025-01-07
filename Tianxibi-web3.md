@@ -51,13 +51,11 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {partypill}
+# {田喜碧}
 
-1. 自我介绍
-一个自学了一些python的老白。想努力学习获得更多收益。
+1. 我于今年开始接触 Web3，期间参与过 NFT 相关工作。我一直从事视觉设计工作，若社区有物料更新需求，我很乐意提供帮助。我期望能在边学边做中深入熟悉这个领域，进而为 LXDAO 贡献自己的力量。我还参加过在曼谷举办的 Devcon 以及 LXDAO Coordination Day 活动
 
-2. 你认为你会完成本次残酷学习吗？
-我愿意为此努力。
+2. 会认真学习并完成这次的残酷共学，补足自己在web3领域缺失的板块，希望通过这次学习能为组织的未来发展做出贡献。
 
 ## Notes
 
@@ -65,8 +63,10 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ### 2025.01.06
 
-笔记内容
-
+关于Optimistic Rollup 
+1.理解 Optimistic Rollup 是如何依赖于以太坊等“父”区块链的安全性来运行的。
+2.了解 Optimism 作为 Optimistic Rollup 的具体实现及其设计目标。
+3.Optimism 是一种“Optimistic Rollup”，利用以太坊的共识机制，而不提供自己的机制
 ### 2024.07.12
 
 <!-- Content_END -->

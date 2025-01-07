@@ -33,7 +33,7 @@ Optimism, DAO, Layer2, Governance
 - [LXDAO](https://lxdao.io/) <img alt="organization-logo" height="60px" src="https://cdn.lxdao.io/bafkreiay6vxsvv3ksxr75lzzt3iqy3zja3o2epuxh47ivs24p2xs3awexm.png" />
 - [OP 中文力量](https://x.com/optimismzh) <img alt="organization-logo" height="60px" src="https://cdn.lxdao.io/40f94d52-b2e6-41fd-b605-76e9840c5020.png" />
 - [ETHPanda](https://ethpanda.org/) <img alt="organization-logo" height="60px" src="https://cdn.lxdao.io/45d1c60e-92f6-4247-9d4a-6299cecdae73.png" />
-- [BanklessDAOCN](https://0xbanklesscn.substack.com/) <img alt="organization-logo" height="60px" src="https://cdn.lxdao.io/79379614-a82a-4d41-93ca-9e050b3d3a5c.png" />
+- [BanklessCN](https://0xbanklesscn.substack.com/) <img alt="organization-logo" height="60px" src="https://cdn.lxdao.io/79379614-a82a-4d41-93ca-9e050b3d3a5c.png" />
 
 
 
@@ -43,7 +43,8 @@ Optimism, DAO, Layer2, Governance
 
 ## 社群
 
-Telegram：https://t.me/LXDAO/18240
+学习交流 Telegram：https://t.me/LXDAO/18240
+OP 中文力量 Telegram: https://t.me/optimism_cn/1
 
 ## 学习资料/课程安排
 
@@ -142,46 +143,156 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 <!-- START_COMMIT_TABLE -->
 | Name | 1.06 | 1.07 | 1.08 | 1.09 | 1.10 | 1.11 | 1.12 | 1.13 | 1.14 | 1.15 | 1.16 | 1.17 | 1.18 | 1.19 | 1.20 | 1.21 | 1.22 | 1.23 | 1.24 | 1.25 | 1.26 |
 | ------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| HeliosLz | | | | | | | | | | | | | | | | | | | | | |
-| A3438 | | | | | | | | | | | | | | | | | | | | | |
-| MagicalBridge | | | | | | | | | | | | | | | | | | | | | |
-| verygud-0 | | | | | | | | | | | | | | | | | | | | | |
-| MRzzz-cyber | | | | | | | | | | | | | | | | | | | | | |
-| punkcanyang | | | | | | | | | | | | | | | | | | | | | |
-| brucexu-eth |   | | | | | | | | | | | | | | | | | | | | |
-| qiaopengjun5162 | | | | | | | | | | | | | | | | | | | | | |
-| StarryDesert | | | | | | | | | | | | | | | | | | | | | |
-| debugzhao | | | | | | | | | | | | | | | | | | | | | |
-| JacksonStack | | | | | | | | | | | | | | | | | | | | | |
-| jjeejj | | | | | | | | | | | | | | | | | | | | | |
-| luffythink | | | | | | | | | | | | | | | | | | | | | |
-| iossocket | | | | | | | | | | | | | | | | | | | | | |
-| cherry-yl-sh | | | | | | | | | | | | | | | | | | | | | |
-| Dfbb7879 | | | | | | | | | | | | | | | | | | | | | |
-| DasNarrenschiff | | | | | | | | | | | | | | | | | | | | | |
-| ChinesePaladin61 | | | | | | | | | | | | | | | | | | | | | |
-| sonedigo | | | | | | | | | | | | | | | | | | | | | |
-| wyeeeh | | | | | | | | | | | | | | | | | | | | | |
-| gpteth | | | | | | | | | | | | | | | | | | | | | |
-| bxmyzzbc | | | | | | | | | | | | | | | | | | | | | |
-| Zhangdajiang | | | | | | | | | | | | | | | | | | | | | |
-| Alexliwenhao | | | | | | | | | | | | | | | | | | | | | |
-| stualan | | | | | | | | | | | | | | | | | | | | | |
-| CHENFANGC | | | | | | | | | | | | | | | | | | | | | |
-| zhengjunhe | | | | | | | | | | | | | | | | | | | | | |
-| goudanxiaokui | | | | | | | | | | | | | | | | | | | | | |
-| 8280998 | | | | | | | | | | | | | | | | | | | | | |
-| snaildarter | | | | | | | | | | | | | | | | | | | | | |
-| William-02-02 | | | | | | | | | | | | | | | | | | | | | |
-| pillowtalk-Qy | | | | | | | | | | | | | | | | | | | | | |
-| wuyanhui | | | | | | | | | | | | | | | | | | | | | |
-| btcnice | | | | | | | | | | | | | | | | | | | | | |
-| amandakelake | | | | | | | | | | | | | | | | | | | | | |
-| chendafu2573 | | | | | | | | | | | | | | | | | | | | | |
-| CJC824 | | | | | | | | | | | | | | | | | | | | | |
-| yiwen4 | | | | | | | | | | | | | | | | | | | | | |
-| chenziyu-bxy | | | | | | | | | | | | | | | | | | | | | |
+| HeliosLz | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | |
+| A3438 | ⭕️ |   | | | | | | | | | | | | | | | | | | | |
+| MagicalBridge | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| verygud-0 | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| MRzzz-cyber | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| punkcanyang | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| brucexu-eth | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | |
+| qiaopengjun5162 | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| StarryDesert | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| debugzhao | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| JacksonStack | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| jjeejj | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| luffythink | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| iossocket | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| cherry-yl-sh | ⭕️ |   | | | | | | | | | | | | | | | | | | | |
+| Dfbb7879 | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| DasNarrenschiff | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| ChinesePaladin61 | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| sonedigo | ⭕️ |   | | | | | | | | | | | | | | | | | | | |
+| wyeeeh | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| gpteth | ⭕️ |   | | | | | | | | | | | | | | | | | | | |
+| bxmyzzbc | ⭕️ |   | | | | | | | | | | | | | | | | | | | |
+| Zhangdajiang | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| Alexliwenhao | ⭕️ |   | | | | | | | | | | | | | | | | | | | |
+| stualan | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| CHENFANGC | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| zhengjunhe | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| goudanxiaokui | ⭕️ |   | | | | | | | | | | | | | | | | | | | |
+| 8280998 | ⭕️ |   | | | | | | | | | | | | | | | | | | | |
+| snaildarter | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| William-02-02 | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| pillowtalk-Qy | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| wuyanhui | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| btcnice | ⭕️ |   | | | | | | | | | | | | | | | | | | | |
+| amandakelake | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| chendafu2573 | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| CJC824 | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| yiwen4 | ⭕️ |   | | | | | | | | | | | | | | | | | | | |
+| chenziyu-bxy | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| LunaWang5209 | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| partypill | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| jiubate888 | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
+| Coooder-Crypto | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| yoow4536 | ⭕️ |   | | | | | | | | | | | | | | | | | | | |
+| Marcus-Chen98 | ⭕️ |   | | | | | | | | | | | | | | | | | | | |
+| foresteru | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| YiShengYouNi | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| Thogsloc | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| zedz | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| ChoeyGit | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| Tianxibi-web3 | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| 183Aaros | ✅ |   | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
