@@ -118,7 +118,62 @@ Optimism Rollup 是一种 Layer 2 扩展解决方案，旨在提高以太坊的�
 ---
 
 ### 2025.01.08
+Layer-2 扩容方案旨在解决以太坊主网的拥堵和高 Gas 费问题。目前主要有四种 Layer-2 解决方案，它们在交易成本、安全性、速度等方面各有优劣。以下分别介绍这四种方案的交易成本：
+
+**1. Optimistic Rollup **
+
+*   **工作原理：** 乐观 Rollup 将大量交易在链下打包和执行，然后将交易数据（calldata）和状态根发布到以太坊主链。它“乐观地”假设交易是有效的，并通过欺诈证明机制来处理无效交易。
+*   **交易成本：**
+    *   **L2 Gas 费（链下）：** 非常低，因为交易主要在链下执行。
+    *   **L1 Gas 费（链上）：** 主要成本是 calldata 的 Gas 费，用于将压缩后的交易数据发布到以太坊主链。因此，L1 Gas 费受以太坊主链 Gas Price 的影响较大。
+    *   **总 Gas 费：** `总 Gas 费 = L2 Gas 费 + L1 Gas 费`。总费用通常比以太坊主网低很多，但仍然会受到以太坊主网 Gas Price 的波动影响。
+*   **影响 L1 Gas 费的因素：**
+    *   **Calldata 大小：** 交易数据越多，calldata 越大，L1 Gas 费越高。
+    *   **以太坊主链 Gas Price：** 主网 Gas Price 越高，L1 Gas 费越高。
+    *   **批量处理效率：** 将更多 L2 交易打包成一个 L1 交易可以分摊 L1 Gas 费。
+*   **代表项目：** Arbitrum、Optimism。
+
+**2. ZK Rollup（零知识Rollup）**
+
+*   **工作原理：** ZK Rollup 在链下执行交易，并生成一个简洁的零知识证明（zk-SNARK 或 zk-STARK），证明这些交易的有效性。这个证明会被发布到以太坊主链，验证者无需重新执行所有交易即可验证其有效性。
+*   **交易成本：**
+    *   **L2 Gas 费（链下）：** 也很低。
+    *   **L1 Gas 费（链上）：** 主要成本是发布零知识证明的 Gas 费。虽然证明本身比 calldata 小得多，但生成证明的计算成本较高。
+    *   **总 Gas 费：** 通常比 Optimistic Rollup 更低，尤其是在交易量较大时。
+*   **优势：** 安全性更高，因为不需要等待期和欺诈证明。
+*   **劣势：** 开发难度较高，通用性不如 Optimistic Rollup。
+*   **代表项目：** zkSync、StarkNet。
+
+**3. Validium**
+
+*   **工作原理：** Validium 与 ZK Rollup 类似，也使用零知识证明来验证链下交易的有效性。但不同之处在于，Validium 将交易数据存储在链下，而不是像 ZK Rollup 那样存储在链上。
+*   **交易成本：**
+    *   **L2 Gas 费（链下）：** 非常低。
+    *   **L1 Gas 费（链上）：** 极低，因为只需在链上发布证明，而无需发布交易数据。
+*   **优势：** 交易成本最低。
+*   **劣势：** 数据可用性存在一定风险，因为数据存储在链下，如果数据提供者出现问题，可能会导致用户无法访问自己的资产。
+*   **适用场景：** 适合对安全性要求不高，但对成本非常敏感的应用，例如游戏、支付等。
+*   **代表项目：** StarkEx。
+
+**4. Plasma**
+
+*   **工作原理：** Plasma 使用一种“子链”结构，将交易放在独立的子链上执行，并通过默克尔树将子链的状态根锚定到以太坊主链。
+*   **交易成本：**
+    *   **L2 Gas 费（链下）：** 较低。
+    *   **L1 Gas 费（链上）：** 用于将子链的状态根提交到主链，成本相对较低。
+*   **劣势：** 提款需要较长的等待期（挑战期），并且在某些情况下可能需要用户进行数据可用性证明，这会增加复杂性。
+*   **应用受限：** 由于其固有的局限性，Plasma 的应用范围相对有限，主要用于简单的支付和代币转移。
+*   **目前使用较少**
+
+**四种方案的交易成本对比（大致排序，具体数值会根据网络状况变化）：**
+
+Validium < ZK Rollup < Optimistic Rollup < 以太坊主网
+
 ### 2025.01.09
+通过阅读 [资料](https://medium.com/l2beat/introducing-stages-a-framework-to-evaluate-rollups-maturity-d290bb22befe) 构想经过三个阶段
+- Stage 0 — Full Training Wheels: At this stage, the rollup is effectively run by the operators. Still, there is an source-available software that allows for the reconstruction of the state from the data posted on L1, used to compare state roots with the proposed ones.
+- Stage 1 — Limited Training Wheels: In this stage, the rollup transitions to being governed by smart contracts. However, a Security Council might remain in place to address potential bugs. This stage is characterized by the implementation of a fully functional proof system, decentralization of fraud proof submission, and provision for user exits without operator coordination. The Security Council, comprised of a diverse set of participants, provides a safety net, but its power also poses a potential risk.
+- Stage 2 — No Training Wheels: This is the final stage where the rollup becomes fully managed by smart contracts. At this point, the fraud proof system is permissionless, and users are given ample time to exit in the event of unwanted upgrades. The Security Council’s role is strictly confined to addressing soundness errors that can be adjudicated on-chain, and users are protected from governance attacks.
 ### 2025.01.10
 ### 2025.01.11
 ### 2025.01.12

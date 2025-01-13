@@ -76,23 +76,34 @@ Optimistic Rollups 是一种基于承诺链（commit chain）和执行链（exec
 
 ### 2025.01.08
 
-笔记内容
+Op-stack 主要由 op-node, op-geth, op-batcher, op-proposer, CrossDomainMessenger, OptimismPortal, Bridge contracts 和 L2OutputOracle contract 等角色组成
 
 ### 2025.01.09
 
-笔记内容
+Op-stack 的 rollup 由两个服务来承担
+
+op-batcher 服务：主要职责是负责将交易数据提交到 Layer1 的 EOA 地址
+op-proposer 服务：主要职责是负责将交易状态提交到 Layer1 的 L2OutputOracle 合约
 
 ### 2025.01.10
 
-笔记内容
+信使合约的主要功能是跨链通信，核心方法位 sendMessage 与 relayMessage；
+sendMessage: 将包裹的消息从源链发送到目标链上，维护自增的 msgNonce, 确报跨链消息的唯一性和安全性
+relayMessage: 将源链发过来的消息在目标链上构建 MsgHash 对比，确保消息的一致性之后在目前链上调度执行该消息 在 op-stack 中在 L1 和 L2 层分别有
+L1CrossDomainMessenger
+L2CrossDomainMessenger 继承自 CrossDomainMessenger 合约，来承载跨链通信
 
 ### 2025.01.11
 
-笔记内容
+Optimism 是以太坊的第 2 层 （L2） 扩展解决方案，旨在以低廉的成本提供闪电般的交易速度。旨在推动以太坊的愿景，通过透明和可持续的区块链实现去中心化，为公众创造利益。
+
+作为 L2，Optimism 建立在以太坊架构之上。因此，它相当于以太坊虚拟机，是以太坊主层的最小延伸。通过这种方式，开发者和加密货币用户能够以低费用享受快速交易，同时享受以太坊架构的安全性。
+
+Optimism 现旨在通过一个名为 Superchain 的平台进一步增强其可扩展性，该平台由基于 OP Stack 构建的链网络组成，该网络将其 OP 主网与其他 L2 链合并。作为超级链，Optimism 旨在打造可互操作且可组合的生态系统，简化 L2s 的集成。
 
 ### 2025.01.12
 
-笔记内容
+用户调用 SDK 获取提现交易的状态，若状态为 READY_TO_PROVE, 说明交易可以进行证明； 用户可以调用 SDK 的 proveMessage 去进行交易的证明，或者直接 call OptimismPortal 合约 proveWithdrawalTransaction 方法进行交易的证明，当证明交易产生之后，等到交易过了挑战期，交易状态会变成 READY_FOR_RELAY；这个时候用户可以调用 SDK 的 finalizeMessage 方法进行资金的 Claim, 也可以直接调用 OptimismPortal 合约的 finalizeWithdrawalTransaction 方法进行资金的 Claim。
 
 ### 2025.01.13
 

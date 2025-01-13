@@ -65,6 +65,29 @@ The OP Stack of today was built to support [the Optimism Superchain](https://do
 * 区块生产：由`sequencer`单一管理
 * **Fault proofs** （故障证明）：challenge window持续7天
 
-### 2024.07.12
+### 2025.01.07
+
+#### Layer2 解决方案对比
+
+由于以太坊网络拥堵导致 gas fee 大幅上涨（每秒 15～30 笔交易），Layer2 的解决方案目前主要聚焦在解决网络面临的低效率问题，同时仍能保持以太坊区块链的完整性
+
+目前主要有四种技术方案：Optimistic Rollup、ZK Rollup、Plasma、Validium
+
+* ZK Rollup 和 Optimistic Rollup 都是将交易数据压缩后存储在主链上，通过主链验证交易的有效性，从而实现扩容
+* Plasma 和 Validium 则是将交易数据存储在链下，通过主链验证交易的有效性，从而实现扩容
+
+普通转账 ETH 需要字节数 112 左右，ZK 压缩为 12个字节，OP 系压缩为 78.4 左右
+
+#### Gas 费用
+
+* ZK Sync 每笔交易的成本由 2 个部分组成
+    * 链下部分（存储+证明者成本）：状态存储和 SNARK（零知识证明）生成的成本（这部分依赖于硬件资源的使用，因此是不变的。我们的基准估计每次转账约为 0.001 美元。）
+    * 链上部分（GAS 成本）：对于每个zkSync 区块，验证者必须支付以太坊 gas 来验证 SNARK，另外每笔交易额外支付约 0.4k gas 来发布状态（链上部分是一个变量，取决于以太坊网络中当前的 gas 价格。但是，这部分比普通 ETH/ERC20 转账的成本要便宜几个数量级。）
+
+* Optimistic Rollup 每笔交易的成本由L2 执行费和L1 数据费组成
+    * L2 执行费：每笔 L2 交易都会支付一定的 执行费用 （等同于以太坊的收费方式）
+    * L1 数据费：Optimism 上的所有交易也都发布到以太坊，此步骤对于 Optimism 的安全属性至关重要，因为这意味着同步 Optimism 节点所需的所有数据始终在以太坊上公开可用（受以太坊当前的gas价格影响）
+
+[一文了解Layer2的四大解决方案交易成本对比](https://learnblockchain.cn/article/3703#4、optimism%20Gas%20机制)
 
 <!-- Content_END -->

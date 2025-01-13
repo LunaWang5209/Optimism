@@ -78,4 +78,36 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
       2. Arbitrum 会经过多伦协商，将最后单步的断言发给 EVM 进行验证， 消耗更少的 gas
       3. Optimism 解决争议的方式 更加简单，更加快速
 
+### 2025.01.08
+
+1. 学习了 文章 https://medium.com/l2beat/introducing-stages-a-framework-to-evaluate-rollups-maturity-d290bb22befe 引入了 Stage 的概念 来判断 rollup 的 成熟程度
+   1. Stage 0 还在中心化管理
+   2. Stage 1 过度到智能合约管理，但是安理会可以独自解决潜在的错误
+   3. Stage 2 完全由智能合约管理
+
+### 2025.01.09
+
+1. 阅读外部文章：Op 完全兼容 EVM ,严格执行 以太坊黄皮书，任何基于 Geth 编写的代码 都可以无需修改运行再 OP 上
+2. 当运行验证节点，验证器在发现欺诈时会自动提交欺诈证明
+
+### 2025.01.10
+
+1. 阅读 https://community.optimism.io/welcome/welcome-overview 治理理念
+   1. 由 company 、communities、citizens 组成 的 collective
+   2. Superchain 标准化，推进了链的发展
+   3. 治理模型有 2 部分组成：Token house and Citizens’ House, 2 院治理体系
+
+### 2025.01.11
+
+1. 今天 看了下 Token house 和 Citizens’ House 2 院治理体 有什么区别， 分别刻意投票什么，没有特明白，希望可以解答一下
+
+### 2025.01.12
+
+1. 阅读 Superchain 基本介绍：https://docs.optimism.io/stack/explainer
+   1. Superchain 本质上是一个由多个采用 Optimism 的 OP Stack 构建的第二层（L2）区块链网络组成的集合
+   2. 把 OP 主网 和 其他链 合并到一个 统一的 OP 链中 (chains within the Superchain)
+   3. 相互之间是可以通信，标准的通信协议，共享的通信基础设置
+   4. 去中心化的需要，目前还不能完全满足，但是是可以实现的
+   5. Superchain 可以水平扩展多个链
+
 <!-- Content_END -->

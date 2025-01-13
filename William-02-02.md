@@ -194,13 +194,85 @@ Optimism 还通过 **OP基金会** 和其他生态系统项目来推动生态建
 任务：
 
 1. GAS相关表述https://learnblockchain.cn/article/3703
-2. **合约实现的详解**
-3. 分片sharding withEIP4844
+
+EIP-4488: Transaction calldata gas cost reduction with total calldata limit
+
+> - 用户的交易通过第二层（Layer 2）的“分组”进行汇总，并通过“calldata”发布到主网。该改进将使发布 calldata 到主网的成本降低，从而显著减少最终用户的气费。
+> - ZK-rollup 比以太坊基础层便宜 40 到 100 倍，由于在多笔交易中分摊气费，交易费用已经降低了 3 到 8 倍。根据 Buterin 的说法，扩大数据区域将使“rollup 成本降低 5 倍”。
+
+Gas
+
+> zkSync = **链下部分（存储 + 证明者成本 验证snark）**+**链上部分（gas 成本 验证snark）**
+>
+> Rollup的交易地板价依赖于 ETH 主网 calldata 的费用。 --EIP4488
+>
+> zkPorter = 链下成本
+>
+> ![image-20250108215836301](./.William-02-02.assets/image-20250108215836301.png)
+>
+> Arbitrum= ![26.png](./.William-02-02.assets/50.png)
+>
+> optimism= L2 执行费和 L1 数据/安全费。
+>
+> 
+>
+> L2s 是目前以太坊扩展的最佳解决方案，在提供高吞吐量和更便宜的费用的同时，可以很好的利用 L1s 的安全性。但由于Layer 2的扩容解决方案也在不断的更新和调整，每种方案都有其各自的优劣势，总体来说，zk rollup的交易费用更低、极限/部分TPS更快、最大拓展性也大大的得到提高以及在安全性上也有保证，zkporter次之；其他解决方案的交易费用也有所降低，但是同zk rollup相比略逊色。
 
 
 
 
 
 ### 2025.01.09
+
+休息
+
+1. 分片sharding withEIP4844
+
+### 2025.01.10
+
+![image-20250110221523916](./.William-02-02.assets/image-20250110221523916.png)
+
+零知识证明的方案是怎样的
+
+在不给对方展示A的情况下 证明自己有A
+
+> 首先包含两个角色
+>
+> 1. 验证者 Verifier 接受证明并验证其正确性，而不需要知道证明的详细内容。
+> 2. 证明者 Prover 持有秘密信息并生成证明。
+>
+> 目前存在的方案 **zk-SNARKs** 和 **zk-STARKs**
+>
+> zk-SNARKs 是一种非交互式的零知识证明，它允许证明者在没有与验证者交互的情况下生成证明。它的“简洁性”意味着证明的大小和验证的时间非常短。
+>
+> zk-STARKs 是 zk-SNARKs 的一种改进版本，它同样是零知识证明，但不依赖于可信设置，因此更加去中心化和安全。STARKs 证明相对于 SNARKs 来说更为 **可扩展** 和 **透明**。
+
+分片和EIP4844
+
+> **EIP-4844**（Proto-Danksharding）是以太坊在实现分片之前的过渡方案，它通过引入新的数据存储形式（Blob）来增加以太坊的吞吐量并降低交易费用。
+>
+> 区块链的分片相关的实现
+>
+> ![image-20250110224052958](./.William-02-02.assets/image-20250110224052958.png)
+
+### 2025.01.12
+
+zk整体架构: 见assets/https://www.aicoin.com/zh-Hant/article/279743
+
+简单来说：L2提交零知识证明至L1对应contract
+
+![image-20250112183357908](./.William-02-02.assets/image-20250112183357908.png)、
+
+![image-20250112183546766](./.William-02-02.assets/image-20250112183546766.png)
+
+​	zkSync zkPorter
+
+1. **合约实现的详解** 
+
+
+
+### 2025.01.13
+
+
 
 <!-- Content_END -->

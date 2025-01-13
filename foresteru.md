@@ -214,6 +214,119 @@ Framework to guid the progreassion of rollups from Stage 0 to Stage 2.
   - Users have at least 30 days to exit in case of unwanted upgrades.
   - Security Council is restricted to act only due to errors detected on chain.
     
-### 2024.07.12
+### 2025.01.10
+### 治理理念
+
+**Design Principles**
+
+- Governance minimization
+- Iteration
+- Forking
+- Balance
+- Impact = profit
+
+The reward is from the centralized sequencer profits to Ethereum protocol development.
+
+Retroactive rewards
+
+**Optimism Collective: Token House + Citizens' House (bicameral governance system)**
+
+- Token House vote based on tokens
+  - Quorum: minimum number of OP votes, % of the total votable OP supply, as of the start of the voting period.
+  - Approval threshold: % of votes cast to approve relative to the total number of yes/no votes for a proposal.(Exclude abstain votes)
+  - hosted on the Optimism Governance Portal.
+- Citizen House vote based on one person one vote
+  - Quorum: % of the total number of Citizens at the start of each Season.
+  - Approval threshold: % of the total number of Citizens at the start of each Season.
+  - Hosted on the Citizens’ House Snapshot Space
+    
+	(Source: https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md)
+
+**Q:** 
+
+How are the Token House and Citizen House members elected? What are the differences?
+
+**A:**
+
+**Token House Election Process**
+1. Delegate Nomination and Approval:
+	- Self-Nomination: Individuals interested in becoming delegates can nominate themselves by submitting a delegate commitment, outlining their intentions and qualifications.
+	- Delegate Approval: Certain positions, such as those on the Security Council, require nominations to receive explicit approvals from existing top delegates. For example, Security Council candidates need 8 Top 100 delegate approvals. 
+2. Voting by Token Holders:
+	- Voting Power: OP token holders can delegate their voting power to delegates who represent their interests in governance decisions.
+	- Election Cycles: Elections are conducted during specific governance seasons, with defined timelines for nominations, approvals, and voting.
+	- Approval Voting: Delegates are elected through approval voting, where token holders can vote for any number of nominees. The candidates with the most votes secure the positions. 
+3. Term and Responsibilities:
+	- Term Limits: Currently, there are no term limits for representatives, but this may change based on governance needs.
+	- Roles: Delegates participate in various councils and boards, such as the Grants Council and Developer Advisory Board, influencing protocol upgrades, fund allocations, and other governance matters.
+   
+**Citizen House Election Process**
+1. Citizenship Selection:
+  - Identity-Based Membership: The Citizen House operates on a one-person-one-vote principle, focusing on individual human stakeholders like builders, users, and community members aligned with the project's values.
+  - Initial Selection: Early participants were selected via a 'Web of Trust,' where known individuals were invited by the Optimism Foundation, Token House, past Retro Funding award winners, and existing badgeholders. 
+2. Experimental Approaches:
+  - Guest Voters: To refine the selection process, the Citizen House experiments with guest voters in Retro Funding rounds, allowing temporary participation to assess different selection mechanisms. 
+  - Evolving Criteria: The criteria for citizenship are designed to evolve over time, informed by ongoing experimentation and community feedback, aiming to enhance the effectiveness of governance.
+3. Deliberative Processes:
+  - Collaborative Decision-Making: The Citizen House emphasizes deliberation, with members engaging in discussions to reach consensus on funding allocations and other decisions.
+  - Ratification: Outcomes from deliberative processes are ratified by the full Citizen House before implementation, ensuring collective agreement.
+
+![image](https://github.com/user-attachments/assets/c0743055-fea3-4052-8141-9bd5fa982a90)
+
+**Comparison between Token House and Citizen House members**
+
+![image](https://github.com/user-attachments/assets/bbfd69be-2558-4ad0-b148-d31457f6a55a)
+
+
+**Q:**
+
+Are there any rewards or incentives for people to become House members or delegates?
+
+**A:**
+
+While Token House delegates receive direct rewards (like OP token incentives), Citizen House members are incentivized through recognition, influence, and opportunities to shape the ecosystem's future. These incentives are carefully structured to align with the Optimism Collective’s mission of building for the collective good.
+
+
+
+### Identity and Reputation
+
+**Problem summary**
+
+We need robust user and project identity within the Optimism Collective as a foundation for Citizenship.This will improve the quality of Token House elections, better support developers on their journey of building on the superchain and create a high trust ecosystem.
+In our plan for how to get there, we need to avoid following known pitfalls:
+- Products that on their own don’t solve a problem, don’t get adopted.
+- Attestations aren’t valuable unless they are being consumed in a real use case.
+- There may be a cold start or chicken-and-egg problem in bootstrapping an identity/reputation network.
+- Defining the criteria for citizenship ‘top down’ and issuing related attestations misses an opportunity for emergent knowledge.
+- Attestations issued for their own sake are at risk of being arbitrary - i.e. not representing anything meaningful for the Optimism Collective.
+
+**Principles**
+
+- Prioritize the things that will help Citizenship emerge organically over defining Citizenship top-down.
+- Issue attestations that will be used for something right away rather than issuing attestations for every little thing that might be useful in the future.
+- When aggregating data, avoid arbitrary inputs and ensure there is a way to measure effectiveness.
+- Design with the expectation that what is built will attract farmers.
+
+**Governance Goals**
+
+- Capture resistance
+- Resource allocation
+
+
+**Multisig vs Security Council**
+
+**Q:**
+
+If making the selection process for multisig signers like the Security Council and the number of signers the same as Security Council members, would it be sufficient not to set up the Security Council?
+
+**A:**
+
+A multisig-based system, even if improved, cannot fully replace the Security Council’s governance role because:
+- It lacks the institutional legitimacy and community trust that the Security Council provides.
+- It would remain a technical mechanism, unable to serve as a deliberative governance body.
+- It is not designed to support progressive decentralization or evolve into a more robust governance structure.
+
+
+
 
 <!-- Content_END -->

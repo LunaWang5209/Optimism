@@ -1,4 +1,3 @@
----
 timezone: Asia/Shanghai
 ---
 
@@ -63,50 +62,164 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ### 2025.01.06
 
-Optimism Co-learning Notes, day1: OP and OP Rollup
+Optimism Co-learning Notes, day1: 
 
-#Optimism
+#### OP and OP Rollup
 
 Dedication:
-
 scaling Ethereum's tech
-
 expanding its ability
-
 coordinape ppl world-wide to build decentralised economies+governance systems
 
 Principle:
-
 impact=profit
 
 OP Collective:
-
 Builds open-source software
 
 OP Stack:
-
 decentralised software stack
-
 backbone of blockchains i.e. OP Mainnet& base
 
-OP Rollups
-
+OP Rollups:
 Leverage the consensus mechanism of L1
 
-#Block
+#### Block
 
-Block storage
-
+Block storage:
 using non-contract address(for min gas) on ETH
-
 write in compressed format
-
 transaction anti-censorship via EIP-4844 blobs
-
 inherits ETH availability& integrity
 
-#Optimism #Note #Co-learning #Blockchain/Layer2 #Technical
+Biobiography:
+https://specs.optimism.io/
 
-### 2024.01.07
+### 2025.01.07
+
+Key takeaway:
+
+#### OP Mainnet Transaction fee
+Transaction fee [Execution Gas Fee(Base fee, Priority fee), L1 Data Fee]
+
+#### L1 Data Fee，Ecotone:
+(1)tx_compressed_size = [(count_zero_bytes(tx_data)*4 + count_non_zero_bytes(tx_data)*16)] / 16
+
+(2)
+weighted_gas_price = 16*base_fee_scalar*base_fee + blob_base_fee_scalar*blob_base_fee
+
+L1 Data Fee, Ecotone = (1) * (2)
+
+#### L1 Data Fee，Fjord
+L1 Data Fee，Fjord(FastLZ-compressed size, base fee/ blob base fee):
+
+(1) estimatedSizeScaled = max(minTransactionSize * 1e6, intercept + fastlzCoef*fastlzSize)
+
+(2)l1FeeScaled = baseFeeScalar*l1BaseFee*16 + blobFeeScalar*l1BlobBaseFee
+
+where both scalars are scaled by 1e6,
+
+thus,
+
+L1cost = (1)*(2)/1e12
+
+#### Biobiography:
+https://docs.optimism.io/stack/transactions/fees
+
+### 2025.01.08
+
+Key takeaway:
+
+Stage 0 - Full training wheels, still an source available software allows reconstruction of the state.
+
+ - rollup
+ - state roots
+ - provide DA (data availability) on L1
+ - reconstructiion of state source available
+
+Stage 1 - Limited ~, governed by smart contract, council implementation for security.
+
+- proper proof system
+- fraud proof
+- user may exit without oper's coordination
+- 7 days exit window
+- 50% of the security council participants from external
+
+Stage 2 - No ~, final stage, no council.
+
+- permissionless
+- 30 days exit window
+- Security Council restricted to errors detected
+
+### 2025.01.09
+The learning material today I choose from, has head back to VB's original articles on scaling, which inspring the design of Optimism.
+
+Key takeaway: (mainly focus the aspect of VB's analytical framework)
+
+Some prior background - Blockchain scaling/decentralised/safety triangle dillema etc.
+
+Identify the problem 
+- the consensus architectures rely on every node processing every transaction
+
+When it comes to soluions, one particular thing that really stand out is, 
+VB has assessed many factors even potential growth model and how would these model choices could end up with.
+i.e. Batching vs. other solutions, in a sense of the comparison of a linea growth model solution vs. exponential growth model, but with a trade-off (i.e. ETH 2.0, a trade-off of the dev cycle).
+
+At the very last part of the article, VB has mentioned shadow chain, we can see the idea that inspired Optimism Rollups. From the analytical thinking side, he identified the trade-offs, and can also see how his analytical framework constructs the original version of L2 solution that temporarily compromises, but better for solving the trilemma in the long run.
+
+#### Biobiography:
+Buterin, V. (2014) 'Scalability, Part 1: Building on Top', Vitalik Buterin's Blog, 17 September 2014.
+https://blog.ethereum.org/2014/09/17/scalability-part-1-building-top
+
+### 2025.01.10
+休息
+
+### 2025.01.11
+
+#### Optimism Collective
+- a collective of companies + communities + citizens working together
+       - to reward publicgood
+       - build a sustainable future for Ethereum
+
+#### Vision
+- standardization
+- Supechain scales
+- governance protect security
+- governance creates flywheel of sustainable growth and dev
+
+#### Mission
+- to create an internet that benefits all and is owned by none
+
+#### Governance
+- digital democratic governance consists of 2 houses
+- Token house: submitting, deliberating, voting on various types of governance proposals.
+    - vote directly
+    - delegate
+- Citizen house: 1 person = 1 vote, also responsible for RPGF (Retro Funding);
+    - reduce concentration of power
+    - safeguard against capture of Token House (whales etc.)
+    - Allocate resources for long-term benefit
+
+#### Biobiography:
+Citizens House section: https://community.optimism.io/citizens-house/citizen-house-overview
+
+#### What's next?
+Understand how Token house and citizen house works in a more in-depth aspect.
+
+Sources:
+1. The Collective’s Operating Manual
+https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md#valid-proposal-types
+
+2. The Collective’s Working Constitution
+https://gov.optimism.io/t/working-constitution-of-the-optimism-collective/55
+
+3. Identity and Reputation: Foundation within the Collective
+https://community.optimism.io/identity/identity-and-rep
+
+4. Decentralization Milestone
+https://docs.google.com/spreadsheets/d/1IpL0oTd3AgNBu_eWdjP9EjbQfZjq-_Nd3yU1H2ke3vY/edit?gid=0#gid=0
+
+5. Decision Diagram Working Model
+https://www.figma.com/board/iXqyKmLJeBeplKpJBHDI7G/PUBLIC%3A-Optimism-Decision-Diagram-Working-Model?node-id=0-1&node-type=canvas&t=QLiz1uM1DepwYyHy-0
 
 <!-- Content_END -->
