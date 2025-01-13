@@ -194,7 +194,32 @@ Stage 2：无训练轮
 
 
 ### 2025.01.13
-学习笔记：Optimism Collective 和 Superchain 1. Optimism Collective 的概述 •  Optimism Collective 是由公司、社区和公民组成的合作组织，旨在通过奖励公共利益，建设以太坊的可持续未来。  •  核心目标是构建 Superchain，通过协作实现去中心化和可组合性，同时保护网络安全并推动增长。   2. Superchain 产品愿景 •  标准化：统一链的规则，支持大规模去中心化和可组合性。  •  扩展性：从 15-50 条链扩展到 1000+，用户体验如单一链。  •  治理保障：通过治理机制确保安全和可持续发展。   3. 核心原则：Impact=Profit •  目标：构建一个无主但为所有人服务的互联网。  •  方法：通过奖励创造积极影响的行为，推动新的经济模式 Ether’s Phoenix。   4. 双院制治理 1.  Token House ◦  由 OP 代币持有者组成，负责提交、讨论和投票治理提案。  ◦  支持直接投票或委托投票权。    2.  Citizens' House ◦  基于声誉的一人一票系统，专注于 Retro Funding，奖励对 Collective 和 Superchain 有贡献的行为。     协作模式：两院共同推动 Collective 愿景，通过分工和制衡优化决策。 5. 关键文件 •  工作宪法：定义 Collective 的治理原则（2022 年制定）。  •  操作手册：记录治理流程，随 Collective 发展动态更新。  •  去中心化模型：概述去中心化阶段和治理决策流程。
+学习笔记：Optimism Collective 和 Superchain 
+1. Optimism Collective 的概述
+   •  Optimism Collective 是由公司、社区和公民组成的合作组织，旨在通过奖励公共利益，建设以太坊的可持续未来。
+    •  核心目标是构建 Superchain，通过协作实现去中心化和可组合性，同时保护网络安全并推动增长。
+
+2. Superchain 产品愿景
+   •  标准化：统一链的规则，支持大规模去中心化和可组合性。
+   •  扩展性：从 15-50 条链扩展到 1000+，用户体验如单一链。
+    •  治理保障：通过治理机制确保安全和可持续发展。
+
+3. 核心原则：Impact=Profit
+   •  目标：构建一个无主但为所有人服务的互联网。
+   •  方法：通过奖励创造积极影响的行为，推动新的经济模式 Ether’s Phoenix。
+
+4. 双院制治理 h5
+4.1 **Token House**
+   •  由 OP 代币持有者组成，负责提交、讨论和投票治理提案。
+   •  支持直接投票或委托投票权。
+4.2 Citizens' House
+   •  基于声誉的一人一票系统，专注于 Retro Funding，奖励对 Collective 和 Superchain 有贡献的行为。
+   协作模式：两院共同推动 Collective 愿景，通过分工和制衡优化决策。
+
+5. 关键文件
+   •  工作宪法：定义 Collective 的治理原则（2022 年制定）。
+   •  操作手册：记录治理流程，随 Collective 发展动态更新。
+   •  去中心化模型：概述去中心化阶段和治理决策流程。
 
 ### 2025.01.14
 
